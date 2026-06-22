@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>百家乐 · 游戏说明与快速识别</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f4f5f7;
+      color: #1e2a3a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      background: #ffffff;
+      margin-top: 28px;
+      margin-bottom: 28px;
+      border-radius: 32px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02);
+      padding: 56px 40px 48px;
+      text-align: center;
+      border: 1px solid #eaeef2;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      color: #0f1a2e;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: #1d4a6b;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.18rem;
+      color: #3d4f61;
+      max-width: 700px;
+      margin: 0 auto 24px;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: #e8edf3;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      color: #1f3c54;
+      border: 1px solid #d4dde6;
+    }
+
+    /* ===== Cards Section ===== */
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 500;
+      margin: 48px 0 28px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #dce3ea;
+      color: #1f2f42;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e3e9ef;
+      border-radius: 24px;
+      padding: 28px 24px 24px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #1b2f44;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #34495e;
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+    }
+
+    .card .icon-emoji {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    /* ===== 说明区 ===== */
+    .explain-section {
+      background: #ffffff;
+      border-radius: 28px;
+      border: 1px solid #e1e9f0;
+      padding: 36px 40px;
+      margin-bottom: 48px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    .explain-section h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #152b3e;
+    }
+
+    .explain-section p {
+      margin-bottom: 16px;
+      color: #2c4055;
+    }
+
+    .explain-section .link-sentence {
+      background: #f1f5fa;
+      padding: 16px 20px;
+      border-radius: 18px;
+      border-left: 5px solid #3d6f92;
+      margin: 20px 0 10px;
+    }
+
+    /* ===== FAQ 摘要 ===== */
+    .faq-summary {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 48px;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid #e2e9ef;
+      border-radius: 18px;
+      padding: 18px 26px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 500;
+      font-size: 1.08rem;
+      margin-bottom: 6px;
+      color: #1c3146;
+    }
+
+    .faq-item span {
+      color: #364b60;
+    }
+
+    /* ===== 底部链接 ===== */
+    .footer-links {
+      background: #ffffff;
+      border-radius: 28px;
+      border: 1px solid #e3eaf0;
+      padding: 28px 34px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-links .text-area {
+      flex: 1 1 240px;
+      color: #2e4057;
+    }
+
+    .footer-links .text-area a {
+      color: #1f4b6d;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #9bb7cf;
+    }
+
+    .footer-links .text-area a:hover {
+      border-bottom: 1px solid #1f4b6d;
+    }
+
+    .footer-note {
+      font-size: 0.9rem;
+      color: #64778b;
+      margin-top: 8px;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: #d7e0e8;
+      margin: 24px 0 16px;
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 700px) {
+      .hero { padding: 36px 20px; }
+      .hero h1 { font-size: 2rem; }
+      .explain-section { padding: 24px 20px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .footer-links { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 460px) {
+      .container { padding: 0 16px; }
+      .hero h1 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Hero 区 -->
+    <header class="hero">
+      <h1>想了解 <span>百家乐</span> 这款游戏？</h1>
+      <p>从规则到界面，快速帮你确认这里的内容是否就是你正在找的。不绕弯子，只讲关键信息。</p>
+      <div class="tagline">🎲 经典桌游 · 在线场景 · 规则清晰</div>
+    </header>
+
+    <!-- 优势区（卡片） -->
+    <h2 class="section-title">为什么先看这里</h2>
+    <div class="card-grid">
+      <div class="card">
+        <span class="icon-emoji">📋</span>
+        <h3>一目了然的结构</h3>
+        <p>没有杂乱的跳转，页面以规则说明、玩法要点、常见疑问为主，帮你快速判断是否匹配你的预期。</p>
+      </div>
+      <div class="card">
+        <span class="icon-emoji">🧩</span>
+        <h3>聚焦核心体验</h3>
+        <p>专注于百家乐本身的流程与选项：庄闲、赔率、补牌规则等，不做无关的信息堆砌。</p>
+      </div>
+      <div class="card">
+        <span class="icon-emoji">🔄</span>
+        <h3>适配多种设备</h3>
+        <p>在手机、平板、电脑上均可顺畅阅读，卡片布局自动调整，不丢失内容层级。</p>
+      </div>
+      <div class="card">
+        <span class="icon-emoji">🔍</span>
+        <h3>直白不夸大</h3>
+        <p>所有描述均基于通用玩法与规则，不包含保证收益、策略必胜等误导性说法。</p>
+      </div>
+    </div>
+
+    <!-- 说明区：从用户识别用途切入 -->
+    <section class="explain-section">
+      <h2>这个页面能帮你识别什么</h2>
+      <p>假如你搜索或点击进入了一个带有「百家乐」字样的网站，第一反应通常是：<em>这里是不是我要找的那款游戏？ 规则清楚吗？界面是否容易上手？</em></p>
+      <p>为此，我们把最常见的辨识点整理出来：游戏目标、庄闲双方、补牌条件、以及常见的投注区域。你不需要翻阅冗长的文档，下方摘要就能给你一个轮廓。</p>
+      <div class="link-sentence">
+        💡 如果你希望直接进入游戏页面进一步了解规则与界面，可以前往 <a href="https://m--baccarat.com">百家乐</a> 查看具体内容。那里延续了同样的简洁风格，没有多余干扰。
+      </div>
+      <p style="margin-top: 18px;">无论是初次接触还是想确认是否与记忆中的版本一致，这里的信息都能作为参考。我们不做“必胜技巧”或“漏洞”类的诱导，只呈现最通用的玩法框架。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <h2 class="section-title">常见疑问摘要</h2>
+    <div class="faq-summary">
+      <div class="faq-item">
+        <strong>❓ 百家乐的基本规则复杂吗？</strong>
+        <span>不复杂。核心是比庄家和闲家两方的点数，9点或最接近9点的一方获胜。有固定的补牌规则，不需要玩家决策是否补牌。</span>
+      </div>
+      <div class="faq-item">
+        <strong>❓ 可以在哪里快速看到界面和投注选项？</strong>
+        <span>在 <a href="https://m--baccarat.com">百家乐</a> 页面中，提供了清晰的区域示意，包括庄、闲、和以及对应的赔率显示，便于你了解布局。</span>
+      </div>
+      <div class="faq-item">
+        <strong>❓ 页面是否有会员系统或充值引导？</strong>
+        <span>本介绍页仅做信息展示，不涉及账户注册或财务操作。链接指向的网站以玩法说明为主，不包含诱导充值内容。</span>
+      </div>
+      <div class="faq-item">
+        <strong>❓ 用手机浏览体验如何？</strong>
+        <span>采用响应式设计，在手机屏幕上卡片会自动堆叠，文字大小适配阅读，不需要横向缩放。</span>
+      </div>
+    </div>
+
+    <!-- 底部链接区域 -->
+    <footer class="footer-links">
+      <div class="text-area">
+        <p style="margin-bottom: 8px;">如果你想对 <a href="https://m--baccarat.com">百家乐</a> 有更完整的认识，包括具体牌桌示意、历史走势参考以及规则详解，可以直接通过上方链接访问。</p>
+        <p class="footer-note">本站仅提供客观介绍，不鼓励任何形式的投机或非理性参与。请根据自身情况合理判断。</p>
+      </div>
+      <div style="color: #4a617b; font-size: 0.92rem; white-space: nowrap;">
+        <span>📌 内容参考 · 通用规则</span>
+      </div>
+    </footer>
+
+    <!-- 最底部仅保留一个极淡的版本标识（无推广） -->
+    <hr>
+    <p style="text-align: center; color: #8b9dae; font-size: 0.78rem; padding-bottom: 32px; letter-spacing: 0.3px;">
+      介绍页 · 帮助快速识别网站用途 · 无商业诱导
+    </p>
+  </div>
+</body>
+</html>
