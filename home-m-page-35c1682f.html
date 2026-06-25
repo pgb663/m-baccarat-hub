@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界杯 · 持续关注的角落</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f2f4f6;
+      color: #2c3e50;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* 头部引导 */
+    .hero-note {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      padding: 2.2rem 2rem 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid #e4e7ea;
+    }
+    .hero-note h1 {
+      font-size: 1.9rem;
+      font-weight: 550;
+      letter-spacing: -0.01em;
+      color: #1a2634;
+      margin-bottom: 0.5rem;
+    }
+    .hero-note .meta {
+      display: flex;
+      gap: 1.2rem;
+      font-size: 0.85rem;
+      color: #6c7a8a;
+      border-bottom: 1px solid #eef0f2;
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .hero-note .meta span {
+      background: #eef0f2;
+      padding: 0.15rem 0.7rem;
+      border-radius: 30px;
+    }
+    .hero-note p {
+      margin-top: 0.75rem;
+      color: #3f4a58;
+    }
+    .hero-note .intro-highlight {
+      background: #f7f9fb;
+      border-left: 4px solid #b7c5d4;
+      padding: 0.7rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.2rem 0 0.2rem;
+      font-size: 0.95rem;
+      color: #2d3e50;
+    }
+
+    /* 分区卡片 */
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.6rem;
+      border: 1px solid #e2e6eb;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    }
+    .card h2 {
+      font-size: 1.35rem;
+      font-weight: 520;
+      color: #1f2a38;
+      margin-bottom: 0.9rem;
+      letter-spacing: 0.01em;
+    }
+    .card p {
+      margin-bottom: 0.8rem;
+    }
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .subdued {
+      color: #546a7a;
+    }
+
+    .highlight-quote {
+      background: #f1f4f8;
+      padding: 0.9rem 1.4rem;
+      border-radius: 14px;
+      margin: 1.4rem 0 0.8rem;
+      border: 1px solid #dadfe5;
+      color: #2d3e4f;
+      font-size: 0.95rem;
+    }
+    .highlight-quote strong {
+      color: #1b2a38;
+    }
+
+    .faq-mini {
+      margin-top: 0.8rem;
+    }
+    .faq-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed #dce1e7;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-weight: 510;
+      color: #1f2d3b;
+    }
+    .faq-a {
+      color: #4d5f72;
+      font-size: 0.92rem;
+      margin-top: 0.05rem;
+    }
+
+    /* 访问句 — 自然内嵌链接 */
+    .visit-sentence {
+      background: #f4f7fa;
+      border-radius: 40px;
+      padding: 0.8rem 1.8rem;
+      text-align: center;
+      margin: 1.8rem 0 1rem;
+      border: 1px solid #d3dae2;
+      font-size: 0.98rem;
+    }
+    .visit-sentence a {
+      color: #1e4b6e;
+      text-decoration: none;
+      font-weight: 510;
+      border-bottom: 1px dotted #95adc5;
+      transition: border 0.15s;
+    }
+    .visit-sentence a:hover {
+      border-bottom: 2px solid #1e4b6e;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #8595a6;
+      margin-top: 2.8rem;
+      border-top: 1px solid #dfe4e9;
+      padding-top: 1.5rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .hero-note, .card {
+        padding: 1.4rem 1.2rem;
+      }
+      .hero-note h1 {
+        font-size: 1.6rem;
+      }
+      .visit-sentence {
+        padding: 0.7rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero / 文章标题 + 导语 -->
+  <div class="hero-note">
+    <h1>再访 · 世界杯的收藏夹</h1>
+    <div class="meta">
+      <span>持续关注</span>
+      <span>球场以外</span>
+    </div>
+    <p>有些页面值得反复打开，不是为了新鲜感，而是想确认时间线上的坐标。当一届赛事落幕，那份对下一届的期待反而更清晰。距离2026还有一段路，但收藏夹里的地址始终亮着。</p>
+    <div class="intro-highlight">
+      每次点开都是同一处起点，却不再是同一种心境。—— 写给习惯收藏、偶尔回看的你
+    </div>
+  </div>
+
+  <!-- 正文段落 1：关于收藏和回访 -->
+  <div class="card">
+    <h2>收藏夹里的锚点</h2>
+    <p>浏览器收藏栏里塞满了几十个链接，但真正会在安静时点开的并不多。世界杯的页面是其中一个。不为检索数据，也不为追最新新闻，更像是一种确认：它还在，我也还在。那几年跟着赛程熬夜、和群友争论判罚的日子，好像都被折叠进了这个链接。</p>
+    <p>所以再次访问不是重复，而是返回。从上一届的终点走到下一届的起点，中间隔着的是日常生活——换了工作、搬了城市、桌上多了一盆绿植。但页面没变，它还是那样安静地等着。</p>
+  </div>
+
+  <!-- 正文段落 2：关注的节奏感 -->
+  <div class="card">
+    <h2>持续关注，而不是时刻紧盯</h2>
+    <p>关注一届大赛，不一定要全天候刷新动态。生活里大部分时间被通勤、待办清单和晚餐吃什么占据。只是偶尔，在工作间隙或周末午后，会想起翻一翻那个页面。看看赛程轮廓、主办城市的新场馆照片，或者只是读一读别人写的故事。</p>
+    <p>这种关注是温和的，像在日历上做了个轻记号。它不催促你，但你知道它会在那里，慢慢生长成下一个夏天的形状。</p>
+    <div class="highlight-quote">
+      <strong>一个简单的习惯：</strong> 把感兴趣的页面放在书签栏的固定位置，每隔几周点一次。不需要每次都看很久，但每一次都能重新接上那根线。
+    </div>
+  </div>
+
+  <!-- 场景 + 提示卡片 -->
+  <div class="card">
+    <h2>场景：当你在夜里再次打开</h2>
+    <p>手机屏幕的光微微亮起，浏览器历史记录里跳出熟悉的域名。你窝在沙发里，手指悬停片刻，然后点下去。页面加载的那一两秒里，你会想些什么？也许是上次一起看球的朋友发来的消息，也许是上一届决赛后你在街上吹过的晚风。</p>
+    <p>这些场景没有固定的文案，每个人都有自己的版本。但页面作为容器，始终保持着开放状态，等你下次回来。</p>
+
+    <div class="faq-mini">
+      <div class="faq-item">
+        <div class="faq-q">为什么值得一直放在收藏夹里？</div>
+        <div class="faq-a">不是因为内容每天更新，而是因为它代表一个你愿意持续投入兴趣的方向。赛事有周期，但期待可以跨年。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">多久回访一次比较自然？</div>
+        <div class="faq-a">没有标准答案。有人每月一次，有人只在赛季临近时想起。随性就好，收藏不是任务。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 访问句：自然嵌入 a 标签，可见文本严格等于“世界杯” -->
+  <div class="visit-sentence">
+    如果你也习惯把某个地址留在手边，这里是一个选项：<a href="https://home-m-fifa2026.com">世界杯</a>。不复杂，不喧哗，只是在你需要的时候，它还在。
+  </div>
+
+  <!-- 小提示：引申回收藏主题 -->
+  <div class="card" style="background: #fafbfc;">
+    <p style="font-size: 0.93rem; color: #435567;"><span style="background: #e7ecf1; padding: 0.1rem 0.6rem; border-radius: 20px; margin-right: 0.4rem;">🔖</span> 给未来的自己留一个入口。不是每一个网址都要频繁访问，但每一个被收藏的链接都代表一段你曾认真对待的时间。</p>
+  </div>
+
+  <div class="footer-note">
+    · 安静 · 持续 · 回访 ·
+  </div>
+
+</div>
+</body>
+</html>
