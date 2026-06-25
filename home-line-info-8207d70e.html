@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于世界杯 – 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: #1e1e2f;
+            background: #f7f6f0;
+        }
+
+        /* hero 深色头图 */
+        .hero {
+            background: linear-gradient(145deg, #0b0b15 0%, #1d1d2b 60%, #2c2c3e 100%);
+            color: #eee9dd;
+            padding: 6rem 2rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid #c9a44c;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: -10%;
+            width: 140%;
+            height: 70%;
+            background: radial-gradient(circle at 30% 40%, rgba(201, 164, 76, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0.8rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .hero .subhead {
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin: 1.2rem auto 0;
+            opacity: 0.85;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid rgba(201, 164, 76, 0.3);
+            padding-top: 1.4rem;
+            display: inline-block;
+        }
+
+        /* 浅色正文区容器 */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1.8rem 4rem;
+        }
+
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 400;
+            border-left: 5px solid #c9a44c;
+            padding-left: 1.1rem;
+            margin-bottom: 2rem;
+            color: #1b1b2a;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem 1.6rem;
+            margin: 2.8rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem 1.5rem 2rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #eae7de;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #232336;
+            margin-bottom: 0.7rem;
+            letter-spacing: 0.3px;
+        }
+
+        .card p {
+            font-size: 0.97rem;
+            color: #3d3d4e;
+        }
+
+        .highlight {
+            color: #a5812b;
+            font-weight: 500;
+        }
+
+        a {
+            color: #8a6f2b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1.5px;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #c9a44c;
+            text-decoration-color: #c9a44c;
+        }
+
+        .faq-summary {
+            background: #f0ede5;
+            border-radius: 28px;
+            padding: 2.2rem 2.2rem 2.5rem;
+            margin: 3rem 0 2rem;
+        }
+
+        .faq-summary h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1.6rem;
+            color: #1f1f30;
+        }
+
+        .faq-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #dad5ca;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: #2c2c3f;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-answer {
+            color: #4a4a5c;
+            font-size: 0.95rem;
+        }
+
+        .footnote {
+            margin-top: 3rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #d6d1c4;
+            font-size: 0.9rem;
+            color: #5d5d6e;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .footnote a {
+            color: #8a6f2b;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid #c9a44c;
+            color: #4d3f1e;
+            background: transparent;
+            padding: 0.5rem 1.6rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            margin-top: 0.4rem;
+        }
+
+        .btn-outline:hover {
+            background: #c9a44c;
+            color: #1a1a20;
+            border-color: #c9a44c;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 4rem 1.2rem 3.5rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 2rem 1.2rem 2.5rem;
+            }
+            .section-title {
+                font-size: 1.4rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .faq-summary {
+                padding: 1.6rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- hero -->
+    <section class="hero">
+        <h1>世界杯 &middot; 简明观赛指南</h1>
+        <div class="subhead">从赛程查询到实时资讯，一次理清你最需要的线索</div>
+    </section>
+
+    <!-- 正文 -->
+    <div class="container">
+
+        <!-- 优势区：三个卡片 -->
+        <h2 class="section-title">为什么需要一份指南</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>赛程 · 一目了然</h3>
+                <p>小组赛、淘汰赛、决赛——时间线不再混乱。我们整理了关键节点与常见时区对照，方便你快速定位自己关心的场次。</p>
+            </div>
+            <div class="card">
+                <h3>看点 · 不止胜负</h3>
+                <p>除了大热门，还有哪些黑马值得留意？哪些老将可能是最后一次踏上绿茵？这里有一份安静的观察视角。</p>
+            </div>
+            <div class="card">
+                <h3>提醒 · 实用优先</h3>
+                <p>转播平台、官方信息源、出行与票务提示——所有你可能会用到的链接，都集中在下方。没有冗余，只有清晰。</p>
+            </div>
+        </div>
+
+        <!-- 说明区：从简明指南和访问提醒切入 -->
+        <div style="margin: 2.5rem 0 1.5rem;">
+            <p>本届 <a href="https://home-line-fifa2026.com">世界杯</a> 的赛程跨度大、分布城市多，即使是有经验的观赛者，也容易遗漏重要时间节点。我们专门整理了一份轻量级路径：从开幕式前一周的预热，到决赛夜的交通与直播提醒，力求让你在信息洪流里找到一条安静的线索。</p>
+            <p style="margin-top: 1.2rem;">同时需要留意：官方售票窗口、签证政策以及部分城市的住宿信息会有动态调整。我们建议你定期核对 <a href="https://home-line-fifa2026.com">世界杯</a> 官网上的最新公告，避免因信息滞后影响计划。保持关注，但不必过度焦虑——好的准备往往只需要几个关键步骤。</p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-summary">
+            <h2>常见问题 · 摘要</h2>
+            <div class="faq-item">
+                <div class="faq-question">小组赛阶段会有几个比赛日重叠？</div>
+                <div class="faq-answer">通常小组赛最后两轮会出现每日多场同时开球的情况，具体场次安排以官方赛程为准。建议提前标记你要看的场次。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何确认我所在的区域能看到直播？</div>
+                <div class="faq-answer">大部分地区会由当地持牌转播商覆盖，部分比赛也可能提供免费流媒体。官网的“在哪里看”页面会列明合法渠道。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">官方纪念品商店只在线下吗？</div>
+                <div class="faq-answer">除了赛事主会场周边的线下快闪店，也设有线上商城。但部分限量商品可能仅在实体店发售，可以留意官方通知。</div>
+            </div>
+            <div style="margin-top: 1rem; text-align: right;">
+                <span style="color: #6a6a7a; font-size: 0.9rem;">更多细节请直接访问 </span>
+                <a href="https://home-line-fifa2026.com" class="btn-outline">世界杯</a>
+            </div>
+        </div>
+
+        <!-- 底部链接区域 -->
+        <div class="footnote">
+            <div>本页面为独立整理，内容仅供参考。所有信息以<a href="https://home-line-fifa2026.com">世界杯</a>官方发布为准。</div>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem 2rem; margin-top: 0.5rem;">
+                <span>赛程 · 提示 · 资源</span>
+                <span>保持节奏，理性观赛</span>
+                <a href="https://home-line-fifa2026.com" style="text-decoration: underline;">世界杯</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
